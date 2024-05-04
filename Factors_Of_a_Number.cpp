@@ -28,7 +28,9 @@ int main(){
 calc_spf();// first we will store smallest prime factor for each number
 // now we can find the prime factorization of any number in logn
 // example --> 35 --> spf[35] --> 5    35/5 = 7 and spf[5] = 5 so we get the prime factorization as 5*7 (order can vary)
-int val = 32;
+
+for(int i = 1;i <= 100;i++){
+int val = i;
 map<int,int> prime_fac;
 while(spf[val] != 1){
     //cout<<spf[val]<<" ";
@@ -41,4 +43,5 @@ vector<int> factors;
 get_factors(0,prime_factors.size(),1,factors,prime_factors);
 // sort(factors.begin(),factors.end());
 for(auto it:factors)cout<<it<<" "<<"\n";
+}
 }
